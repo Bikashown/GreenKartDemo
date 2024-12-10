@@ -15,6 +15,7 @@ public class Hooks {
 	@After
 	public void closeApp() throws IOException
 	{
+		//This is for closing the browser.
 		testconceptsetup.testbase.WebDriverManagers().quit();
 	}
 
