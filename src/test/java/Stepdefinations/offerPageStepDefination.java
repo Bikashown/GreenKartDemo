@@ -13,7 +13,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utility.TestContextSetup;
-
+import PageObject.OfferPage;
 public class offerPageStepDefination {
 	
 	
@@ -26,14 +26,15 @@ public class offerPageStepDefination {
 	}
 	
 	@Then("User searched for same shortname {string} in offer page to check if product exist with same name")
-	public void user_searched_for_same_shortname_in_offer_page_to_check_if_product_exist(String string) {
-		testconceptsetup.driver.findElement(By.xpath("//*[text()='Top Deals']")).click();
-		Set<String> windows=testconceptsetup.driver.getWindowHandles();
-		Iterator<String> i=windows.iterator();
-		testconceptsetup.driver.switchTo().window(i.next());
-		testconceptsetup.driver.switchTo().window(i.next());
-		testconceptsetup.driver.findElement(By.id("search-field")).sendKeys(string);
-		productNameinOfferPage=testconceptsetup.driver.findElement(By.xpath("//*[@class='table table-bordered']/tbody/tr/td[1]")).getText();
+	public void user_searched_for_same_shortname_in_offer_page_to_check_if_product_exist(String string) throws InterruptedException {
+	
+		//Thread.sleep(2000);
+		OfferPage offerpage=testconceptsetup.pageobjectfactory.getOfferPage();
+		offerpage.geteditBoxTopDeal().click();
+		testconceptsetup.genericmethod.switchToChildWindow();
+		//testconceptsetup.driver.findElement(By.id("search-field")).sendKeys(string);
+		offerpage.geteditboxSearchField().sendKeys(string);
+		productNameinOfferPage=offerpage.getOfferpageProductName().getText();
 	    System.out.println(productNameinOfferPage+" is extracted from offer page.");
 	    Assert.assertEquals(testconceptsetup.productNameinMainPage,productNameinOfferPage,"Both names are matching.");
 	}
