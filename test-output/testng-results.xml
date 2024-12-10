@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-12T17:58:28 IST" name="Default suite" finished-at="2024-11-12T17:58:33 IST" duration-ms="4848">
+  <suite started-at="2024-12-11T01:16:07 IST" name="Default suite" finished-at="2024-12-11T01:16:13 IST" duration-ms="5511">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberRunner.runnerclass@77f1baf5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-11-12T17:58:28 IST" name="Default test" finished-at="2024-11-12T17:58:33 IST" duration-ms="4848">
+    <test started-at="2024-12-11T01:16:07 IST" name="Default test" finished-at="2024-12-11T01:16:13 IST" duration-ms="5511">
       <class name="cucumberRunner.runnerclass">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberRunner.runnerclass@77f1baf5]" started-at="2024-11-12T17:58:28 IST" name="setUpClass" finished-at="2024-11-12T17:58:28 IST" duration-ms="159" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberRunner.runnerclass@77f1baf5]" started-at="2024-12-11T01:16:07 IST" name="setUpClass" finished-at="2024-12-11T01:16:07 IST" duration-ms="173" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@72ee5d84]]>
+                <![CDATA[org.testng.TestRunner@6cc558c6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberRunner.runnerclass@77f1baf5]" started-at="2024-11-12T17:58:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-12T17:58:33 IST" duration-ms="4653" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberRunner.runnerclass@77f1baf5]" started-at="2024-12-11T01:16:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-11T01:16:13 IST" duration-ms="5295" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberRunner.runnerclass@77f1baf5]" started-at="2024-11-12T17:58:33 IST" name="tearDownClass" finished-at="2024-11-12T17:58:33 IST" duration-ms="1" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberRunner.runnerclass@77f1baf5]" started-at="2024-12-11T01:16:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-11T01:16:12 IST" duration-ms="4797" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search experience for product in both offer and product page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Search and place order for any product in greenKart application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Both names are matching. expected [No data] but found [Beetroot]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Both names are matching. expected [No data] but found [Beetroot]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at Stepdefinations.offerPageStepDefination.user_searched_for_same_shortname_in_offer_page_to_check_if_product_exist(offerPageStepDefination.java:39)
+at ✽.User searched for same shortname Beet in offer page to check if product exist with same name(file:///E:/Automation/PMC/src/test/java/features/productsearch.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberRunner.runnerclass@77f1baf5]" started-at="2024-12-11T01:16:13 IST" name="tearDownClass" finished-at="2024-12-11T01:16:13 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
