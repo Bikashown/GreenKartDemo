@@ -34,7 +34,7 @@ public class greenKartStepdefinations {
 		//testconceptsetup.driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
 	   
 	}
-	@When("User searched with shortname {string} amd extracted actual name of product")
+	@When("^User searched with shortname (.+) amd extracted actual name of product$")
 	public void user_searched_with_shortname_amd_extracted_actual_name_of_product(String string) throws InterruptedException {
 		//LandingPage landingpage=new LandingPage(testconceptsetup.driver);
 		//testconceptsetup.driver.findElement(By.xpath("//*[@type='search']")).sendKeys(string);

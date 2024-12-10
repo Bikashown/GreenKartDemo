@@ -25,7 +25,7 @@ public class offerPageStepDefination {
 		this.testconceptsetup=testconceptsetup;
 	}
 	
-	@Then("User searched for same shortname {string} in offer page to check if product exist with same name")
+	@Then("^User searched for same shortname (.+) in offer page to check if product exist with same name$")
 	public void user_searched_for_same_shortname_in_offer_page_to_check_if_product_exist(String string) throws InterruptedException {
 	
 		//Thread.sleep(2000);
